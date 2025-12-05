@@ -20,7 +20,7 @@ $creator = $users[0]['nom'];
 
 <body class="bg-[#00141a] text-white"> <!-- Suppression de la classe h-[200vh] pour que la hauteur de la page correspond au contenu -->
    <header class="flex flex-col items-center w-full py-2">
-      <nav class="fixed flex gap-10 text-lg bg-white/10 p-2 rounded-xl backdrop-blur-[4px] border border-white/20">
+      <nav class="fixed flex gap-10 text-lg bg-white/10 p-2 rounded-2xl backdrop-blur-[4px] border border-white/20">
          <a class="hover:bg-white/10 rounded-lg p-2 transition-all" href="#accueil">Accueil</a>
          <a class="hover:bg-white/10 rounded-lg p-2 transition-all" href="#contact">Contactez-moi</a>
       </nav>
@@ -51,9 +51,9 @@ $creator = $users[0]['nom'];
             <!-- FORMULAIRE DE CONTACT -->
             <form class="flex flex-col gap-4" action="POST">
                <div class="text-center max-w-[300px]">Pour être recontacté veuillez renseigner les informations suivantes :</div>
-               <input id="input-nom" class="bg-white text-black p-2 rounded-lg w-[300px]" type="text" placeholder="Nom">
-               <input id="input-prenom" class="bg-white text-black p-2 rounded-lg w-[300px]" type="text" placeholder="Prenom">
-               <input id="input-email" class="bg-white text-black p-2 rounded-lg w-[300px]" type="email" placeholder="Adresse email">
+               <input id="input-nom" type="text" class="bg-white text-black p-2 rounded-lg w-[300px]" placeholder="Nom" required>
+               <input id="input-prenom" type="text" class="bg-white text-black p-2 rounded-lg w-[300px]" placeholder="Prenom" required>
+               <input id="input-email" type="email" class="bg-white text-black p-2 rounded-lg w-[300px]" placeholder="Adresse email" required>
                <button id="contact-valider" class="bg-amber-300 text-black p-2 rounded-lg w-[300px] hover:cursor-pointer hover:bg-amber-400 transition-all" type="button">Valider</button>
                <div class="flex flex-col items-center justify-center relative">
                   <div id="form-success" class="hidden top-1 absolute bg-green-600 p-4 text-center rounded-lg transition-all">Votre demande est bien envoyée !</div>
@@ -64,7 +64,7 @@ $creator = $users[0]['nom'];
       </section>
    </main>
    <!-- FOOTER -->
-   <footer class="flex flex-col items-center justify-center w-full h-20 bg-white/10 mt-20">
+   <footer class="flex flex-col items-center justify-center w-full h-30 bg-white/10 mt-20">
       <div>Page web faite par <?= $creator ?>.</div>
    </footer>
 </body>
