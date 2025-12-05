@@ -12,8 +12,8 @@
 <body class="h-[200vh] bg-[#00141a] text-white">
    <header class="flex flex-col items-center w-full py-2">
       <nav class="fixed flex gap-10 text-lg bg-white/10 p-2 rounded-xl backdrop-blur-[4px]">
-         <a class="hover:bg-white/10 rounded-lg p-2" href="#accueil">Accueil</a>
-         <a class="hover:bg-white/10 rounded-lg p-2" href="#contact">Contactez-moi</a>
+         <a class="hover:bg-white/10 rounded-lg p-2 transition-all" href="#accueil">Accueil</a>
+         <a class="hover:bg-white/10 rounded-lg p-2 transition-all" href="#contact">Contactez-moi</a>
       </nav>
    </header>
    <main>
@@ -38,13 +38,17 @@
             <div class="h-[1px] w-[400px] bg-white/50"></div>
          </div>
          <div class="flex items-center gap-8">
-            <img class="max-w-[400px] rounded-xl" src="static/img/img-contact.jpg" alt="image de contact">
+            <img class="max-w-[500px] rounded-xl" src="static/img/img-contact.jpg" alt="image de contact">
             <form class="flex flex-col gap-4" action="POST">
                <div class="text-center max-w-[300px]">Pour être recontacté veuillez renseigner les informations suivantes :</div>
-               <input class="bg-white text-black p-2 rounded-lg w-[300px]" type="text" placeholder="Nom">
-               <input class="bg-white text-black p-2 rounded-lg w-[300px]" type="text" placeholder="Prenom">
-               <input class="bg-white text-black p-2 rounded-lg w-[300px]" type="text" placeholder="Adresse email">
-               <input class="bg-white text-black p-2 rounded-lg w-[300px]" type="button" value="Valider">
+               <input id="input-nom" class="bg-white text-black p-2 rounded-lg w-[300px]" type="text" placeholder="Nom">
+               <input id="input-prenom" class="bg-white text-black p-2 rounded-lg w-[300px]" type="text" placeholder="Prenom">
+               <input id="input-email" class="bg-white text-black p-2 rounded-lg w-[300px]" type="text" placeholder="Adresse email">
+               <button id="contact-valider" class="bg-amber-300 text-black p-2 rounded-lg w-[300px] hover:cursor-pointer hover:bg-amber-400 transition-all" type="button">Valider</button>
+               <div class="flex flex-col items-center justify-center relative">
+                  <div id="form-success" class="hidden top-2 absolute bg-green-600 p-4 text-center rounded-lg transition-all">Votre demande est bien envoyée !</div>
+                  <div id="form-error" class="hidden top-2 abolute bg-red-600 p-4 text-center rounded-lg transition-all">Vos informations ne sont pas correctes</div>
+               </div>
             </form>
          </div>
       </section>
